@@ -1,0 +1,33 @@
+{
+  "name": "martian-cidr",
+  "version": "1.0.0",
+  "description": "Check if an IP address is from reserved subnet",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "babel --out-dir es5/ src/cidrs.js src/index.js",
+    "test": "babel-node src/test.js"
+  },
+  "keywords": [
+    "martian",
+    "packet",
+    "cidr",
+    "subnet",
+    "reserved",
+    "ip",
+    "ipv4",
+    "ipv6"
+  ],
+  "author": {
+    "name": "Artemy Tregubenko",
+    "email": "me@arty.name",
+    "url": "https://arty.name/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ipaddr.js": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "tape": "^4.2.0"
+  }
+}
