@@ -1,5 +1,7 @@
 # Martian CIDR
 
+Check if an IP address is from reserved subnet.
+
 [Certain IP subnets are reserved for special-use by Internet Assigned Numbers Authority (IANA)]
 (https://en.wikipedia.org/wiki/Reserved_IP_addresses). A [Martian packet]
 (https://en.wikipedia.org/wiki/Martian_packet) is an IP packet which specifies 
@@ -25,4 +27,4 @@ You can check if some packet is a Martian packet like that:
 
 ## License
 
-[MIT](./LICENSE.md)
+[MIT](https://github.com/arty-name/martian-cidr/blob/master/LICENSE.md)
