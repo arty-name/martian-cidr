@@ -1,6 +1,6 @@
 {
   "name": "martian-cidr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Check if an IP address is from reserved subnet",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,12 @@
     "ipaddr.js": "^1.0.3"
   },
   "devDependencies": {
-    "babel": "^5.8.23",
+    "babel": "^6.3.13",
+    "babel-cli": "^6.3.15",
+    "babel-preset-es2015": "^6.3.13",
     "tape": "^4.2.0"
+  },
+  "babel": {
+    "presets": ["es2015"]
   }
 }
