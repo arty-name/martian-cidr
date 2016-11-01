@@ -2,6 +2,8 @@
 
 Check if an IP address is from reserved subnet.
 
+[![Build Status](https://travis-ci.org/arty-name/martian-cidr.svg?branch=master)](https://travis-ci.org/arty-name/martian-cidr)
+
 [Certain IP subnets are reserved for special-use by Internet Assigned Numbers Authority (IANA)]
 (https://en.wikipedia.org/wiki/Reserved_IP_addresses). A [Martian packet]
 (https://en.wikipedia.org/wiki/Martian_packet) is an IP packet which specifies 
