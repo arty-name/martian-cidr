@@ -29,9 +29,9 @@
     "ipaddr.js": "^1.0.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
+    "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.3",
-    "@babel/node": "^7.10.1",
+    "@babel/node": "^7.10.4",
     "@babel/preset-env": "^7.10.3",
     "tape": "^5.0.1"
   },
