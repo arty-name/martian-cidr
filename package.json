@@ -5,8 +5,9 @@
   "main": "index.js",
   "module": "src/cidrs.js",
   "scripts": {
-    "prepublish": "babel --out-dir es5/ src/cidrs.js src/index.js",
-    "test": "babel-node src/test.js"
+    "prepublish": "yarn run snyk-protect && babel --out-dir es5/ src/cidrs.js src/index.js",
+    "test": "babel-node src/test.js",
+    "snyk-protect": "snyk protect"
   },
   "keywords": [
     "martian",
@@ -26,7 +27,8 @@
   "repository": "https://github.com/arty-name/martian-cidr",
   "license": "MIT",
   "dependencies": {
-    "ipaddr.js": "^1.0.3"
+    "ipaddr.js": "^1.0.3",
+    "snyk": "^1.401.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.5",
@@ -39,5 +41,6 @@
     "presets": [
       "@babel/preset-env"
     ]
-  }
+  },
+  "snyk": true
 }
