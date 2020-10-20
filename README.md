@@ -12,8 +12,10 @@ these packets cannot actually originate as claimed, or be delivered.
 
 You can check if some packet is a Martian packet like that:
 
-    import isMartianIP from 'martian-cidr'
-    console.log(isMartianIP('10.0.0.1')) // true
+```js
+import isMartianIP from 'martian-cidr'
+console.log(isMartianIP('10.0.0.1')) // true
+```
 
 ## Install
 
