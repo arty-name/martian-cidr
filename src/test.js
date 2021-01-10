@@ -1,5 +1,5 @@
 import test from 'tape'
-import isMartianIP from './index'
+import isMartianIP from './index.js'
 
 test('Martian CIDR', function(t) {
   t.equal(isMartianIP('8.8.8.8'), false, 'should return false for public IPv4 addresses')

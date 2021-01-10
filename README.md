@@ -17,6 +17,11 @@ import isMartianIP from 'martian-cidr'
 console.log(isMartianIP('10.0.0.1')) // true
 ```
 
+## ES modules only
+
+Version 2.0.0 introduces a breaking change: 
+the support for CommonJS is removed, minimal Node.js version becomes 14.
+
 ## Install
 
     npm install --save martian-cidr
@@ -27,7 +32,7 @@ console.log(isMartianIP('10.0.0.1')) // true
     
 ## Author
 
-[Artemy Tregubenko](https://arty.name/)
+[Tom Adler](https://arty.name/)
 
 ## License
 
