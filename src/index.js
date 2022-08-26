@@ -1,5 +1,5 @@
 import ipaddr from 'ipaddr.js'
-import {IPv4, IPv6, IPv6Exception} from './cidrs.js'
+import { IPv4, IPv6, IPv6Exception } from './cidrs.js'
 
 function parseCIDR(cidr) {
   return ipaddr.parseCIDR(cidr)
@@ -15,6 +15,7 @@ export default function isMartianIP(ip) {
   }
 
   const parsedIP = ipaddr.parse(ip)
+
   function matchIP(subnet) {
     return parsedIP.match(subnet)
   }

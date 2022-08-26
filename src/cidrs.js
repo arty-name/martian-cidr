@@ -13,7 +13,7 @@ export const IPv4 = [
   '203.0.113.0/24',
   '224.0.0.0/4',
   '240.0.0.0/4',
-  '255.255.255.255/32'
+  '255.255.255.255/32',
 ]
 
 const reservedIPv6 = [
@@ -27,7 +27,7 @@ const reservedIPv6 = [
   'fc00::/7',
   'fe80::/10',
   'fec0::/10',
-  'ff00::/8'
+  'ff00::/8',
 ]
 
 const IPv6to4 = [
@@ -44,7 +44,7 @@ const IPv6to4 = [
   '2002:cb00:7100::/40',
   '2002:e000::/20',
   '2002:f000::/20',
-  '2002:ffff:ffff::/48'
+  '2002:ffff:ffff::/48',
 ]
 
 const IPv6Teredo = [
@@ -61,7 +61,7 @@ const IPv6Teredo = [
   '2001:0:cb00:7100::/56',
   '2001:0:e000::/36',
   '2001:0:f000::/36',
-  '2001:0:ffff:ffff::/64'
+  '2001:0:ffff:ffff::/64',
 ]
 
 export const IPv6 = [...reservedIPv6, ...IPv6to4, ...IPv6Teredo]
