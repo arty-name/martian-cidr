@@ -1,8 +1,8 @@
 {
   "name": "martian-cidr",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Check if an IP address is from reserved subnet",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "engines": {
     "node": ">=14"
