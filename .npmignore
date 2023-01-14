@@ -1,4 +1,5 @@
 yarn.lock
 .npmignore
-.travis.yml
 .idea
+.github
+.editorconfig
