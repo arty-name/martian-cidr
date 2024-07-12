@@ -8,6 +8,6 @@ jobs:
       - uses: actions/setup-node@v4.0.3
         with:
           node-version: 'lts/*'
-          cache: 'yarn'
-      - run: yarn install --frozen-lockfile
-      - run: yarn test
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test
