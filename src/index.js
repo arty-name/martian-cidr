@@ -1,28 +1,25 @@
 import ipaddr from 'ipaddr.js'
-import { IPv4, IPv6, IPv6Exception } from './cidrs.js'
 
-function parseCIDR(cidr) {
-  return ipaddr.parseCIDR(cidr)
-}
+const { IPv4, IPv6, isValid, parse } = ipaddr
 
-const IPv4Subnets = IPv4.map(parseCIDR)
-const IPv6Subnets = IPv6.map(parseCIDR)
-const exceptionalSubnet = parseCIDR(IPv6Exception)
+const IPv4SpecialRanges = Object.keys(IPv4.prototype.SpecialRanges)
+const IPv6SpecialRanges = Object.keys(IPv6.prototype.SpecialRanges)
+const globalMultiCast = /^ff.e:/
 
 export default function isMartianIP(ip) {
-  if (!ipaddr.isValid(ip)) {
+  if (!isValid(ip)) {
     throw new Error(`Expected valid IP address, called with "${ip}"`)
   }
 
-  const parsedIP = ipaddr.parse(ip)
+  const range = parse(ip).range()
 
-  function matchIP(subnet) {
-    return parsedIP.match(subnet)
+  if (IPv4.isIPv4(ip)) {
+    return IPv4SpecialRanges.includes(range)
   }
 
-  if (ipaddr.IPv4.isIPv4(ip)) {
-    return IPv4Subnets.some(matchIP)
+  if (globalMultiCast.test(ip)) {
+    return false
   }
 
-  return IPv6Subnets.some(matchIP) && !parsedIP.match(exceptionalSubnet)
+  return IPv6SpecialRanges.includes(range)
 }
