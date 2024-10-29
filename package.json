@@ -1,6 +1,6 @@
 {
   "name": "martian-cidr",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Check if an IP address is from reserved subnet",
   "main": "src/index.js",
   "type": "module",
@@ -8,7 +8,7 @@
     "node": ">=14"
   },
   "scripts": {
-    "test": "node src/test.js"
+    "test": "node --test"
   },
   "keywords": [
     "martian",
@@ -28,7 +28,7 @@
   "repository": "https://github.com/arty-name/martian-cidr",
   "license": "MIT",
   "dependencies": {
-    "ipaddr.js": "^2.0.0"
+    "ipaddr.js": "^2.2.0"
   },
   "devDependencies": {}
 }
